@@ -1,0 +1,16 @@
+PODS:
+  - DynamicSkeleton (0.1.0)
+
+DEPENDENCIES:
+  - DynamicSkeleton (from `../`)
+
+EXTERNAL SOURCES:
+  DynamicSkeleton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DynamicSkeleton: 998be4144e6e0f98cd069e9f6d8295e72edc5321
+
+PODFILE CHECKSUM: 66dfecfc5dad60f46a56db374ae9ced31f31a11a
+
+COCOAPODS: 1.2.0

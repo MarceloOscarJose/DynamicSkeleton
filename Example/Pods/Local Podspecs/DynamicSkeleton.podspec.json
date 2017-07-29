@@ -1,0 +1,24 @@
+{
+  "name": "DynamicSkeleton",
+  "version": "0.1.0",
+  "summary": "DynamicSkeleton - Create modilarized skeleton",
+  "homepage": "https://github.com/MarceloOscarJose/DynamicSkeleton",
+  "authors": {
+    "Marcelo José": "marcelo.oscar.jose@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/MarceloOscarJose/DynamicSkeleton.git",
+    "tag": "0.1.0"
+  },
+  "license": "none",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source_files": [
+    "Pod/Classes/**/*"
+  ],
+  "resources": [
+    "Pod/Resources/**/*"
+  ]
+}
