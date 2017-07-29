@@ -1,0 +1,3 @@
+framework module Nimble_Snapshots {
+    header "Nimble_Snapshots-Swift.h"
+}
