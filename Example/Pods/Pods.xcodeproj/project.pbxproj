@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0607AD941F2D409900072DA0 /* SkeletonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607AD921F2D409900072DA0 /* SkeletonViewModel.swift */; };
 		2CD3554354F93ACBE2F6047642E51D02 /* DynamicSkeleton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 561FE22B0688E7ADBC0F0BA16896B431 /* DynamicSkeleton-dummy.m */; };
 		8C27372610F2742422FFCE7E44408F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		901E63541DEC46959D6530A4058C8AAD /* Pods-DynamicSkeleton_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9E8ACFDFB93E61196E2859883A55D6 /* Pods-DynamicSkeleton_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0607AD921F2D409900072DA0 /* SkeletonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonViewModel.swift; sourceTree = "<group>"; };
 		0A9E8ACFDFB93E61196E2859883A55D6 /* Pods-DynamicSkeleton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DynamicSkeleton_Example-umbrella.h"; sourceTree = "<group>"; };
 		3846B1C9F9A46074F2C3BD13BC59BEE5 /* Pods-DynamicSkeleton_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DynamicSkeleton_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		50459E60B176B7A95D86898A7D4BB29E /* DynamicSkeleton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicSkeleton.xcconfig; sourceTree = "<group>"; };
@@ -89,6 +91,21 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0607AD911F2D409900072DA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0607AD921F2D409900072DA0 /* SkeletonViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0607AD931F2D409900072DA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1451C8C84893574F18A1258C0048CC31 /* Pod */ = {
@@ -174,6 +191,8 @@
 		FD64452BF2367C9D60736B7D60E771DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0607AD911F2D409900072DA0 /* Models */,
+				0607AD931F2D409900072DA0 /* Views */,
 				6E41ECB2B91F49CAC6D6F7F5BC649983 /* ReplaceMe.swift */,
 			);
 			path = Classes;
@@ -285,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0607AD941F2D409900072DA0 /* SkeletonViewModel.swift in Sources */,
 				2CD3554354F93ACBE2F6047642E51D02 /* DynamicSkeleton-dummy.m in Sources */,
 				A388D05A4C85C2919A46B18740FB7D49 /* ReplaceMe.swift in Sources */,
 			);
