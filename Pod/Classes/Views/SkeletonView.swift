@@ -39,7 +39,7 @@ class SkeletonView: UIView {
     }
 
     public func slide(direction: GradientDirection) {
-        self.gradientView.gradientLayer.slide(to: direction)
+        self.gradientView.gradientLayer.slide(direction: direction)
     }
 
     public func stopSliding() {

@@ -19,9 +19,9 @@ public extension CAGradientLayer {
 
     fileprivate static let KSlideAnimationKey = "SlieAnimation"
 
-    public func slide(to dir: GradientDirection) {
-        let startPointTransition = dir.transition(for: .startPoint)
-        let endPointTransition = dir.transition(for: .endPoint)
+    public func slide(direction: GradientDirection) {
+        let startPointTransition = direction.transition(for: .startPoint)
+        let endPointTransition = direction.transition(for: .endPoint)
         
         let startPointAnim = CABasicAnimation(keyPath: #keyPath(startPoint))
         startPointAnim.applyGradientTransition(startPointTransition)

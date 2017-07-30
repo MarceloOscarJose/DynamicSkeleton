@@ -22,8 +22,8 @@ extension GradientView {
     }
     
     /// A convenient way to slide the `GradientView`'s corresponding `CAGradientLayer`.
-    func slide(to dir: GradientDirection) {
-        return gradientLayer.slide(to: dir)
+    func slide(direction: GradientDirection) {
+        return gradientLayer.slide(direction: direction)
     }
     
     /// A convenient way to stop sliding the `GradientView`'s corresponding `CAGradientLayer`.
