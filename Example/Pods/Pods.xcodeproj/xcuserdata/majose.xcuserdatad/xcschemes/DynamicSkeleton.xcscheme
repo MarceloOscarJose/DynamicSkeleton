@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D5D9D750A60AE58188239F00C4CCBFC1'
+               BlueprintIdentifier = '732D0C9B1303294DB8E685DBCB4889F7'
                BlueprintName = 'DynamicSkeleton'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DynamicSkeleton.framework'>

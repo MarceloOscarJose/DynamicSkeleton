@@ -13,5 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let gradient = DynamicSkeletonManager()
+
+        gradient.createSkeleton(view: self.view, image: UIImage(named: "skeleton")!)
     }
 }

@@ -1,5 +1,7 @@
 PODS:
-  - DynamicSkeleton (0.1.0)
+  - DynamicSkeleton (0.1.0):
+    - PureLayout (= 3.0.1)
+  - PureLayout (3.0.1)
 
 DEPENDENCIES:
   - DynamicSkeleton (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DynamicSkeleton: 998be4144e6e0f98cd069e9f6d8295e72edc5321
+  DynamicSkeleton: 6a7a958e2ed3fe13e5ddfb86dafe096d4a575069
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
 PODFILE CHECKSUM: 66dfecfc5dad60f46a56db374ae9ced31f31a11a
 

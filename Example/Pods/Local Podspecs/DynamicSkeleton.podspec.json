@@ -20,5 +20,10 @@
   ],
   "resources": [
     "Pod/Resources/**/*"
-  ]
+  ],
+  "dependencies": {
+    "PureLayout": [
+      "3.0.1"
+    ]
+  }
 }

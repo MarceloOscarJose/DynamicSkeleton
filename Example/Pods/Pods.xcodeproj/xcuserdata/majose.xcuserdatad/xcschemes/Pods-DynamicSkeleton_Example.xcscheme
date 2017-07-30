@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "785B14916EA5F82AF99BD9FA72383E5D"
+               BlueprintIdentifier = "06D358C959625508FBF2B2077C34EAEA"
                BuildableName = "Pods_DynamicSkeleton_Example.framework"
                BlueprintName = "Pods-DynamicSkeleton_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "785B14916EA5F82AF99BD9FA72383E5D"
+            BlueprintIdentifier = "06D358C959625508FBF2B2077C34EAEA"
             BuildableName = "Pods_DynamicSkeleton_Example.framework"
             BlueprintName = "Pods-DynamicSkeleton_Example"
             ReferencedContainer = "container:Pods.xcodeproj">
