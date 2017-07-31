@@ -17,7 +17,7 @@ extension CABasicAnimation {
 
 public extension CAGradientLayer {
 
-    fileprivate static let KSlideAnimationKey = "SlieAnimation"
+    fileprivate static let KSlideAnimationKey = "SlideAnimation"
 
     public func slide(direction: GradientDirection) {
         let startPointTransition = direction.transition(for: .startPoint)
@@ -31,7 +31,7 @@ public extension CAGradientLayer {
         
         let animGroup = CAAnimationGroup()
         animGroup.animations = [startPointAnim, endPointAnim]
-        animGroup.duration = 0.8
+        animGroup.duration = 1
         animGroup.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         animGroup.repeatCount = .infinity
         

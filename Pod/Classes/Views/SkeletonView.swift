@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SkeletonView: UIView {
-    fileprivate let gradientView = GradientView(frame: .zero)
+public class SkeletonView: UIView {
+    public let gradientView = GradientView(frame: .zero)
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,19 +26,21 @@ class SkeletonView: UIView {
 
         gradientView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(gradientView)
-        
+
         let top = gradientView.topAnchor.constraint(equalTo: topAnchor)
         let bottom = gradientView.bottomAnchor.constraint(equalTo: bottomAnchor)
         let leading = gradientView.leadingAnchor.constraint(equalTo: leadingAnchor)
         let trailing = gradientView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        
         NSLayoutConstraint.activate([top, bottom, leading, trailing])
+    }
 
-        let baseColor = UIColor(red: 242 / 255, green: 242 / 255, blue: 242 / 255, alpha: 1.0)
-        gradientView.gradientLayer.colors = [baseColor.cgColor, baseColor.brightened(by: 0.95).cgColor, baseColor.cgColor]
+    public func setGradientColor(color: UIColor) {
+        self.gradientView.gradientLayer.colors = [color.cgColor, color.brightened(by: 0.96).cgColor, color.cgColor]
     }
 
     public func slide(direction: GradientDirection) {
+        gradientView.layer.cornerRadius = self.layer.cornerRadius
+        gradientView.layer.borderWidth = self.layer.borderWidth
         self.gradientView.gradientLayer.slide(direction: direction)
     }
 

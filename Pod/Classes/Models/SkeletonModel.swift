@@ -10,26 +10,18 @@ import UIKit
 
 public class SkeletonModel {
 
-    var view: UIView
-    var image: UIImage
+    var view: NSObject.Type
     var repeating: Int = 1
-    var left: Float?
-    var right: Float?
-    var top: Float?
-    var bottom: Float?
-    var height: Float?
+    var position: SkeletonPosition = SkeletonPosition(left: nil, right: nil, top: nil, bottom: nil)
+    var height: Float = 0
     var spacing: Int?
 
-    public init(view: UIView, image: UIImage, repeating: Int?, left: Float?, right: Float?, top: Float?, bottom: Float?, height: Float?, spacing: Int?) {
+    public init(view: NSObject.Type, repeating: Int?, position: SkeletonPosition, height: Float?, spacing: Int?) {
         self.view = view
-        self.image = image
         self.repeating = repeating!
 
-        self.left = left
-        self.right = right
-        self.top = top
-        self.bottom = bottom
-        self.height = height
+        self.position = position
+        self.height = height!
         self.spacing = spacing
     }
 }

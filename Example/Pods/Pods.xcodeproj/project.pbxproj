@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06BD94B41F2ED7FF006983DE /* SkeletonPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */; };
 		073111DE6D2CEE8D0B320E309388B4E1 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
 		17BB50F5CAF3908B2D5DF50EA31427FF /* DynamicSkeletonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B68482EFCD20A0C55B6795C737F3EF4 /* DynamicSkeletonManager.swift */; };
 		30F5977DB722C770D2F88793ED9C031C /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */; };
@@ -62,9 +63,10 @@
 
 /* Begin PBXFileReference section */
 		01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonPosition.swift; sourceTree = "<group>"; };
 		0A9E8ACFDFB93E61196E2859883A55D6 /* Pods-DynamicSkeleton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DynamicSkeleton_Example-umbrella.h"; sourceTree = "<group>"; };
-		11A5BF508BFD2A3B4D29443045B7E9D9 /* DynamicSkeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicSkeleton.framework; path = DynamicSkeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		249938C44B3C707521E098F2C5086AD9 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		11A5BF508BFD2A3B4D29443045B7E9D9 /* DynamicSkeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicSkeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		249938C44B3C707521E098F2C5086AD9 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
 		256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
 		2D0D48D26F82F7721BC1C5405C803342 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,21 +79,21 @@
 		561FE22B0688E7ADBC0F0BA16896B431 /* DynamicSkeleton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicSkeleton-dummy.m"; sourceTree = "<group>"; };
 		5B534C911E626872B679012A1B37312E /* GradientTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientTransition.swift; sourceTree = "<group>"; };
 		5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
-		6046B3126CF0C45AD280969FB5F061F7 /* DynamicSkeleton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DynamicSkeleton.modulemap; sourceTree = "<group>"; };
+		6046B3126CF0C45AD280969FB5F061F7 /* DynamicSkeleton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicSkeleton.modulemap; sourceTree = "<group>"; };
 		62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
 		6D986837FA46C6AB4A8D72FCAA1B4454 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
 		6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		729B7CB5C33BC879F5611FAB25E279A5 /* DynamicSkeleton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicSkeleton-umbrella.h"; sourceTree = "<group>"; };
 		73118F08E604E5EA6DA844EED0A38240 /* SkeletonModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SkeletonModel.swift; sourceTree = "<group>"; };
 		74D82BC0D96D7D8B4BFD9D44A618780A /* Pods-DynamicSkeleton_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DynamicSkeleton_Example-dummy.m"; sourceTree = "<group>"; };
-		77EAB2D040CC29D6E39DCE608BFBEB5A /* Pods_DynamicSkeleton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DynamicSkeleton_Example.framework; path = "Pods-DynamicSkeleton_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7882736449301950E519D3869BEAFC94 /* Pods-DynamicSkeleton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DynamicSkeleton_Example.modulemap"; sourceTree = "<group>"; };
+		77EAB2D040CC29D6E39DCE608BFBEB5A /* Pods_DynamicSkeleton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicSkeleton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7882736449301950E519D3869BEAFC94 /* Pods-DynamicSkeleton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DynamicSkeleton_Example.modulemap"; sourceTree = "<group>"; };
 		7B68482EFCD20A0C55B6795C737F3EF4 /* DynamicSkeletonManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DynamicSkeletonManager.swift; sourceTree = "<group>"; };
 		808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		81C5E7E2EDC85C15F379478BF5AB0CF8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87DD60B35205FE1E9110F74A2E02D7F1 /* GradientPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientPoint.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9520AE1F95B7F87D4196596D8888EDCE /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9520AE1F95B7F87D4196596D8888EDCE /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7BB02D0CD6F42D115A1AB158D56A72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A423D2F7AC9109AA01A996DDC98B1F8B /* Pods-DynamicSkeleton_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DynamicSkeleton_Example-resources.sh"; sourceTree = "<group>"; };
 		AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
@@ -172,7 +174,6 @@
 			children = (
 				4CDF34EADABFB34F6F9C229B162F28FF /* GradientView.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -202,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				73118F08E604E5EA6DA844EED0A38240 /* SkeletonModel.swift */,
+				06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -212,7 +213,6 @@
 			children = (
 				CACED30B1C3A03D136EA2A722D09C51E /* Classes */,
 			);
-			name = Pod;
 			path = Pod;
 			sourceTree = "<group>";
 		};
@@ -224,7 +224,6 @@
 				87DD60B35205FE1E9110F74A2E02D7F1 /* GradientPoint.swift */,
 				5B534C911E626872B679012A1B37312E /* GradientTransition.swift */,
 			);
-			name = Gradient;
 			path = Gradient;
 			sourceTree = "<group>";
 		};
@@ -301,7 +300,6 @@
 				5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */,
 				2F7CB2F8AA04108B4168449AFCA94214 /* Support Files */,
 			);
-			name = PureLayout;
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
@@ -322,7 +320,6 @@
 				46D076C9C07FEF55DDCF51DF5DF40F69 /* Models */,
 				E56B0C9810297AFEBB682F48468E0406 /* Views */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -331,7 +328,6 @@
 			children = (
 				3A7FDC7FC24E18C264CAF0F02FBB12FC /* SkeletonView.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -469,6 +465,7 @@
 				B5523779CE9B7DEBC8D58DD5F0E7826C /* CAGradientLayer+Slide.swift in Sources */,
 				F8AA6A392C4341E3267B1B313EF7060B /* DynamicSkeleton-dummy.m in Sources */,
 				17BB50F5CAF3908B2D5DF50EA31427FF /* DynamicSkeletonManager.swift in Sources */,
+				06BD94B41F2ED7FF006983DE /* SkeletonPosition.swift in Sources */,
 				D793DC2890DD32917BE02CA4514D0922 /* GradientDirection.swift in Sources */,
 				C988196EF3790F934D1D4D91AB3A73DB /* GradientPoint.swift in Sources */,
 				499318F64D95169F79B34CCD2057266A /* GradientTransition.swift in Sources */,

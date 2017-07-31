@@ -9,7 +9,7 @@
 import UIKit
 
 /// A view who's `layerClass` is a `CAGradientLayer`.
-class GradientView: UIView {
+public class GradientView: UIView {
     override open class var layerClass: AnyClass {
         return CAGradientLayer.self
     }
