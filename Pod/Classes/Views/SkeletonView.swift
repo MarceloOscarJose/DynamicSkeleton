@@ -35,7 +35,7 @@ public class SkeletonView: UIView {
     }
 
     public func setGradientColor(color: UIColor) {
-        self.gradientView.gradientLayer.colors = [color.cgColor, color.brightened(by: 0.96).cgColor, color.cgColor]
+        self.gradientView.gradientLayer.colors = [color.cgColor, color.brightened(by: 0.94).cgColor, color.cgColor]
     }
 
     public func slide(direction: GradientDirection) {

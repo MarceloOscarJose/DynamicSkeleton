@@ -27,32 +27,26 @@ open class DynamicSkeletonManager {
             let containerView = UIView()
             containerView.clipsToBounds = true
             skeletonMainView.addSubview(containerView)
-            createModelConstraints(skeleton: skeleton, view: containerView)
+            createContainerConstraints(skeleton: skeleton, view: containerView)
 
             let offsetHeight = (skeleton.height != nil) ? skeleton.height : skeleton.position.height
             let repeating = skeleton.repeating == 0 ? Int(ceil(Float(containerView.frame.size.height) / Float(offsetHeight!))) : skeleton.repeating
             var index = 0
 
             repeat {
-                createSkeletonViews(view: skeleton.view as! UIView.Type, height: offsetHeight!, parentView: containerView, index: index)
+                createSkeletonViews(view: skeleton.view as! UIView.Type, height: offsetHeight!, containerView: containerView, index: index)
                 index = index + 1
             } while(index < repeating)
         }
     }
 
-    func createSkeletonViews(view: UIView.Type, height: Int, parentView: UIView, index: Int) {
+    func createSkeletonViews(view: UIView.Type, height: Int, containerView: UIView, index: Int) {
 
-        let viewTop = (index * height)
+        let skeletonView = view.init()
+        containerView.addSubview(skeletonView)
+        createSkeletonConstraints(height: height, index: index, view: skeletonView, containerView: containerView)
 
-        let viewClass:UIView = view.init()
-        parentView.addSubview(viewClass)
-
-        viewClass.autoPinEdge(.top, to: .top, of: parentView, withOffset: CGFloat(viewTop))
-        viewClass.autoPinEdge(.left, to: .left, of: parentView, withOffset: 0)
-        viewClass.autoPinEdge(.right, to: .right, of: parentView, withOffset: 0)
-        viewClass.autoSetDimension(.height, toSize: CGFloat(height))
-
-        for element in viewClass.subviews {
+        for element in skeletonView.subviews {
             if let elementSkeleton = element as? SkeletonView {
                 elementSkeleton.setGradientColor(color: elementSkeleton.backgroundColor!)
                 elementSkeleton.slide(direction: .right)
@@ -74,7 +68,7 @@ open class DynamicSkeletonManager {
         view.layoutSubviews()
     }
 
-    func createModelConstraints(skeleton: SkeletonModel, view: UIView) {
+    func createContainerConstraints(skeleton: SkeletonModel, view: UIView) {
         if let topOffset = skeleton.position.top {
             view.autoPinEdge(.top, to: .top, of: skeletonMainView, withOffset: CGFloat(topOffset))
         }
@@ -93,6 +87,11 @@ open class DynamicSkeletonManager {
 
         skeletonMainView.layoutSubviews()
     }
-    
-    //func create
+
+    func createSkeletonConstraints(height: Int, index: Int, view: UIView, containerView: UIView) {
+        view.autoPinEdge(.top, to: .top, of: containerView, withOffset: CGFloat(index * height))
+        view.autoPinEdge(.left, to: .left, of: containerView, withOffset: 0)
+        view.autoPinEdge(.right, to: .right, of: containerView, withOffset: 0)
+        view.autoSetDimension(.height, toSize: CGFloat(height))
+    }
 }

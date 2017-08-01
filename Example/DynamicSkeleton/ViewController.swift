@@ -18,13 +18,13 @@ class ViewController: UIViewController {
         let headerPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 0, bottom: nil, height: 78)
         let headerModel = SkeletonModel(view: HeaderView.self, repeating: 1, position: headerPosition, height: nil)
 
-        let rowsPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 78, bottom: 100, height: nil)
+        let rowsPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 78, bottom: 0, height: nil)
         let rowsModel = SkeletonModel(view: RowView.self, repeating: 0, position: rowsPosition, height: 74)
 
-        let bottonPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: nil, bottom: 0, height: 100)
-        let bottonModel = SkeletonModel(view: HeaderView.self, repeating: 1, position: bottonPosition, height: nil)
+        let tabbarPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: nil, bottom: 0, height: 52)
+        let tabbarModel = SkeletonModel(view: TabBarView.self, repeating: 0, position: tabbarPosition, height: nil)
 
-        DynamicSkeletonManager.sharedInstance.createSkeleton(view: self.view, model: [headerModel, rowsModel, bottonModel])
+        DynamicSkeletonManager.sharedInstance.createSkeleton(view: self.view, model: [headerModel, rowsModel])
     }
 
     func setupNavigationBar() {
