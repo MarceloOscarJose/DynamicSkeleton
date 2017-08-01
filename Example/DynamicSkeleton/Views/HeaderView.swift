@@ -12,14 +12,14 @@ import PureLayout
 
 class HeaderView: UIView {
 
-    let balanceTitle: SkeletonView = {
-        let view = SkeletonView()
-        view.backgroundColor = UIColor(red: 118 / 255, green: 193 / 255, blue: 246 / 255, alpha: 1)
+    let balanceTitle: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "headerTop"))
+        view.contentMode = .redraw
         return view
     }()
-    let balanceAmount: SkeletonView = {
-        let view = SkeletonView()
-        view.backgroundColor = UIColor(red: 118 / 255, green: 193 / 255, blue: 246 / 255, alpha: 1)
+    let balanceAmount: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "headerBottom"))
+        view.contentMode = .redraw
         return view
     }()
 
@@ -41,7 +41,7 @@ class HeaderView: UIView {
     }
 
     func createConstraints() {
-        balanceTitle.autoPinEdge(.top, to: .top, of: self, withOffset: 24)
+        balanceTitle.autoPinEdge(.top, to: .top, of: self, withOffset: 20)
         balanceTitle.autoPinEdge(.left, to: .left, of: self, withOffset: 14)
         balanceTitle.autoSetDimension(.height, toSize: 14)
         balanceTitle.autoSetDimension(.width, toSize: 124)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		061E6A671F2FBCCF00812A71 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E6A661F2FBCCF00812A71 /* GradientView.swift */; };
+		062E8D8E1F30BF810030D6F5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062E8D8D1F30BF810030D6F5 /* UIView.swift */; };
 		06BD94B41F2ED7FF006983DE /* SkeletonPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */; };
 		073111DE6D2CEE8D0B320E309388B4E1 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
 		17BB50F5CAF3908B2D5DF50EA31427FF /* DynamicSkeletonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B68482EFCD20A0C55B6795C737F3EF4 /* DynamicSkeletonManager.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
 		061E6A661F2FBCCF00812A71 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		062E8D8D1F30BF810030D6F5 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonPosition.swift; sourceTree = "<group>"; };
 		0A9E8ACFDFB93E61196E2859883A55D6 /* Pods-DynamicSkeleton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DynamicSkeleton_Example-umbrella.h"; sourceTree = "<group>"; };
 		11A5BF508BFD2A3B4D29443045B7E9D9 /* DynamicSkeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicSkeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDF34EADABFB34F6F9C229B162F28FF /* UIColor.swift */,
+				062E8D8D1F30BF810030D6F5 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				F8AA6A392C4341E3267B1B313EF7060B /* DynamicSkeleton-dummy.m in Sources */,
 				061E6A671F2FBCCF00812A71 /* GradientView.swift in Sources */,
 				17BB50F5CAF3908B2D5DF50EA31427FF /* DynamicSkeletonManager.swift in Sources */,
+				062E8D8E1F30BF810030D6F5 /* UIView.swift in Sources */,
 				06BD94B41F2ED7FF006983DE /* SkeletonPosition.swift in Sources */,
 				D793DC2890DD32917BE02CA4514D0922 /* GradientDirection.swift in Sources */,
 				C988196EF3790F934D1D4D91AB3A73DB /* GradientPoint.swift in Sources */,

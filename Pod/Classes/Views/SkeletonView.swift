@@ -9,8 +9,10 @@
 import UIKit
 
 public class SkeletonView: UIView {
+
+    private let brightened: CGFloat = 0.94
     public let gradientView = GradientView(frame: .zero)
-    
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
         setUpGradientView()
@@ -20,10 +22,10 @@ public class SkeletonView: UIView {
         super.init(coder: aDecoder)
         setUpGradientView()
     }
-    
+
     /// Sets up the `GradientView` with constraints that that cause it to fill the `UIView` entirely.
     fileprivate func setUpGradientView() {
-
+        gradientView.backgroundColor = UIColor.clear
         gradientView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(gradientView)
 
@@ -34,13 +36,16 @@ public class SkeletonView: UIView {
         NSLayoutConstraint.activate([top, bottom, leading, trailing])
     }
 
-    public func setGradientColor(color: UIColor) {
-        self.gradientView.gradientLayer.colors = [color.cgColor, color.brightened(by: 0.94).cgColor, color.cgColor]
+    public func setGradientColor() {
+        gradientView.layer.cornerRadius = self.layer.cornerRadius
+        gradientView.layer.borderWidth = self.layer.borderWidth
+        if let color = self.backgroundColor {
+            self.gradientView.gradientLayer.colors = [color.cgColor, color.brightened(by: brightened).cgColor, color.cgColor]
+        }
     }
 
     public func slide(direction: GradientDirection) {
-        gradientView.layer.cornerRadius = self.layer.cornerRadius
-        gradientView.layer.borderWidth = self.layer.borderWidth
+        
         self.gradientView.gradientLayer.slide(direction: direction)
     }
 

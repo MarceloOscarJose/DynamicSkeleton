@@ -34,28 +34,38 @@ open class DynamicSkeletonManager {
             var index = 0
 
             repeat {
-                createSkeletonViews(view: skeleton.view as! UIView.Type, height: offsetHeight!, containerView: containerView, index: index)
+                createSkeletonViews(view: skeleton.view as! UIView.Type, height: offsetHeight!, containerView: containerView, index: index, repeating: repeating)
                 index = index + 1
             } while(index < repeating)
         }
     }
 
-    func createSkeletonViews(view: UIView.Type, height: Int, containerView: UIView, index: Int) {
+    public func createSkeletonViews(view: UIView.Type, height: Int, containerView: UIView, index: Int, repeating: Int) {
 
         let skeletonView = view.init()
         containerView.addSubview(skeletonView)
         createSkeletonConstraints(height: height, index: index, view: skeletonView, containerView: containerView)
 
+        //let offsetheight = Int(containerView.frame.size.height / CGFloat(repeating))
+
         for element in skeletonView.subviews {
             if let elementSkeleton = element as? SkeletonView {
-                elementSkeleton.setGradientColor(color: elementSkeleton.backgroundColor!)
+                elementSkeleton.setGradientColor()
                 elementSkeleton.slide(direction: .right)
             }
         }
     }
 
-    func removeSkeleton() {
-        skeletonMainView.removeFromSuperview()
+    public func removeSkeleton(completion: @escaping () -> Void) {
+
+        let strongSelf = self
+
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+            strongSelf.skeletonMainView.alpha = 0
+        }) { _ in
+            strongSelf.skeletonMainView.removeFromSuperview()
+            completion()
+        }
     }
 
     // MARK: Constraints
@@ -93,5 +103,6 @@ open class DynamicSkeletonManager {
         view.autoPinEdge(.left, to: .left, of: containerView, withOffset: 0)
         view.autoPinEdge(.right, to: .right, of: containerView, withOffset: 0)
         view.autoSetDimension(.height, toSize: CGFloat(height))
+        view.layoutSubviews()
     }
 }
