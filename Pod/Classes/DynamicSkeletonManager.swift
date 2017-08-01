@@ -12,7 +12,7 @@ import PureLayout
 open class DynamicSkeletonManager {
 
     public static let sharedInstance = DynamicSkeletonManager()
-    let skeletonMainView = UIView()
+    var skeletonMainView: UIView = UIView()
 
     public init() {
         
@@ -24,32 +24,33 @@ open class DynamicSkeletonManager {
 
         for skeleton in model {
 
-            let modelView = UIView(frame: view.frame)
-            modelView.clipsToBounds = true
-            skeletonMainView.addSubview(modelView)
-            self.createModelConstraints(model: skeleton, view: modelView)
+            let containerView = UIView()
+            containerView.clipsToBounds = true
+            skeletonMainView.addSubview(containerView)
+            createModelConstraints(skeleton: skeleton, view: containerView)
 
-            let repeatingHeight = Float(modelView.frame.size.height) / Float(modelView.frame.size.height)
-            let repeating: Int = (skeleton.repeating == 0) ? Int(ceil(repeatingHeight)) : skeleton.repeating - 1
+            let offsetHeight = (skeleton.height != nil) ? skeleton.height : skeleton.position.height
+            let repeating = skeleton.repeating == 0 ? Int(ceil(Float(containerView.frame.size.height) / Float(offsetHeight!))) : skeleton.repeating
+            var index = 0
 
-            for index in 0...repeating {
-                createSkeletonViews(view: skeleton.view, height: repeatingHeight, spacing: skeleton.spacing!, parentView: modelView, index: index)
-            }
+            repeat {
+                createSkeletonViews(view: skeleton.view as! UIView.Type, height: offsetHeight!, parentView: containerView, index: index)
+                index = index + 1
+            } while(index < repeating)
         }
     }
 
-    func createSkeletonViews(view: NSObject.Type, height: Float, spacing: Int, parentView: UIView, index: Int) {
+    func createSkeletonViews(view: UIView.Type, height: Int, parentView: UIView, index: Int) {
 
-        let viewClass = view.init() as! UIView
+        let viewTop = (index * height)
 
-        let skeletonView = UIView(frame: CGRect(x: 0, y: (index * (Int(height) + spacing)), width: Int(parentView.bounds.width), height: Int(viewClass.frame.size.height)))
-        parentView.addSubview(skeletonView)
-        skeletonView.addSubview(viewClass)
+        let viewClass:UIView = view.init()
+        parentView.addSubview(viewClass)
 
-        viewClass.autoPinEdge(.top, to: .top, of: skeletonView)
-        viewClass.autoPinEdge(.bottom, to: .bottom, of: skeletonView)
-        viewClass.autoPinEdge(.left, to: .left, of: skeletonView)
-        viewClass.autoPinEdge(.right, to: .right, of: skeletonView)
+        viewClass.autoPinEdge(.top, to: .top, of: parentView, withOffset: CGFloat(viewTop))
+        viewClass.autoPinEdge(.left, to: .left, of: parentView, withOffset: 0)
+        viewClass.autoPinEdge(.right, to: .right, of: parentView, withOffset: 0)
+        viewClass.autoSetDimension(.height, toSize: CGFloat(height))
 
         for element in viewClass.subviews {
             if let elementSkeleton = element as? SkeletonView {
@@ -63,54 +64,35 @@ open class DynamicSkeletonManager {
         skeletonMainView.removeFromSuperview()
     }
 
+    // MARK: Constraints
     func createMainConstraints(view: UIView) {
         view.addSubview(skeletonMainView)
         skeletonMainView.autoPinEdge(.top, to: .top, of: view, withOffset: 0)
         skeletonMainView.autoPinEdge(.bottom, to: .bottom, of: view, withOffset: 0)
         skeletonMainView.autoPinEdge(.left, to: .left, of: view, withOffset: 0)
         skeletonMainView.autoPinEdge(.right, to: .right, of: view, withOffset: 0)
+        view.layoutSubviews()
     }
 
-    func createModelConstraints(model: SkeletonModel, view: UIView) {
-        if let topOffset = model.position.top {
+    func createModelConstraints(skeleton: SkeletonModel, view: UIView) {
+        if let topOffset = skeleton.position.top {
             view.autoPinEdge(.top, to: .top, of: skeletonMainView, withOffset: CGFloat(topOffset))
         }
-        if let bottomOffset = model.position.bottom {
+        if let bottomOffset = skeleton.position.bottom {
             view.autoPinEdge(.bottom, to: .bottom, of: skeletonMainView, withOffset: CGFloat(-bottomOffset))
         }
-        if let leftOffset = model.position.left {
+        if let leftOffset = skeleton.position.left {
             view.autoPinEdge(.left, to: .left, of: skeletonMainView, withOffset: CGFloat(leftOffset))
         }
-        if let rightOffset = model.position.right {
+        if let rightOffset = skeleton.position.right {
             view.autoPinEdge(.right, to: .right, of: skeletonMainView, withOffset: CGFloat(-rightOffset))
         }
-        if model.height != 0 {
-            view.autoSetDimension(.height, toSize: CGFloat(model.height))
+        if let offsetHeight = skeleton.position.height {
+            view.autoSetDimension(.height, toSize: CGFloat(offsetHeight))
         }
+
+        skeletonMainView.layoutSubviews()
     }
-
-    func createSkeletonTopConstraints(model: SkeletonModel, view: UIView, lastView: UIView) {
-
-        var spacing = 0
-
-        if let spacingValue = model.spacing {
-            spacing = spacingValue
-        }
-
-        if model.repeating == 0 || model.repeating > 1 {
-            view.autoPinEdge(.top, to: .bottom, of: lastView, withOffset: CGFloat(spacing))
-        } else {
-            view.autoPinEdge(.top, to: .top, of: lastView, withOffset: CGFloat(spacing))
-        }
-    }
-
-    func createSkeletonConstraints(model: SkeletonModel, view: UIView, lastView: UIView) {
-
-        view.autoPinEdge(.left, to: .left, of: lastView, withOffset: 0)
-        view.autoPinEdge(.right, to: .right, of: lastView, withOffset: 0)
-
-        if model.height != 0 {
-            view.autoSetDimension(.height, toSize: CGFloat(model.height))
-        }
-    }
+    
+    //func create
 }

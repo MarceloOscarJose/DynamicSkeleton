@@ -10,15 +10,17 @@ import Foundation
 
 public class SkeletonPosition {
     
-    var left: Float?
-    var right: Float?
-    var top: Float?
-    var bottom: Float?
-    
-    public init(left: Float?, right: Float?, top: Float?, bottom: Float?) {
+    var left: Int?
+    var right: Int?
+    var top: Int?
+    var bottom: Int?
+    var height: Int?
+
+    public init(left: Int?, right: Int?, top: Int?, bottom: Int?, height: Int?) {
         self.left = left
         self.right = right
         self.top = top
         self.bottom = bottom
+        self.height = height
     }
 }

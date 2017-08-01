@@ -35,12 +35,12 @@ class RowView: UIView {
         return view
     }()
 
-    override public init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
     }
@@ -54,6 +54,8 @@ class RowView: UIView {
     }
 
     func createConstraints() {
+        self.backgroundColor = UIColor.white
+
         activityImage.autoSetDimension(.height, toSize: 50)
         activityImage.autoSetDimension(.width, toSize: 50)
         activityImage.autoPinEdge(.top, to: .top, of: self, withOffset: 12)

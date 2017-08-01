@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E6A671F2FBCCF00812A71 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E6A661F2FBCCF00812A71 /* GradientView.swift */; };
 		06BD94B41F2ED7FF006983DE /* SkeletonPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */; };
 		073111DE6D2CEE8D0B320E309388B4E1 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
 		17BB50F5CAF3908B2D5DF50EA31427FF /* DynamicSkeletonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B68482EFCD20A0C55B6795C737F3EF4 /* DynamicSkeletonManager.swift */; };
@@ -23,7 +24,7 @@
 		5A019106E5C680DDFD01D1EAD4EAA3CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1BA3F13EE532082C52082A5162913 /* Foundation.framework */; };
 		61DBD6AC2C3DF8D7F56AA89010255CE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1BA3F13EE532082C52082A5162913 /* Foundation.framework */; };
 		76980C4292BDEDB56742C8876638E40B /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0D48D26F82F7721BC1C5405C803342 /* PureLayout.framework */; };
-		87E0B323CD3F502A0A37F4AB91BE0689 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDF34EADABFB34F6F9C229B162F28FF /* GradientView.swift */; };
+		87E0B323CD3F502A0A37F4AB91BE0689 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDF34EADABFB34F6F9C229B162F28FF /* UIColor.swift */; };
 		89679B8E814655E85B2F967A339A5DF5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FDC7FC24E18C264CAF0F02FBB12FC /* SkeletonView.swift */; };
 		9B037CB42DB1AD66D1913952D32331DA /* SkeletonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73118F08E604E5EA6DA844EED0A38240 /* SkeletonModel.swift */; };
 		B1FD1AEC4CB66504D09C07CAE08B4427 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		061E6A661F2FBCCF00812A71 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		06BD94B31F2ED7FF006983DE /* SkeletonPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonPosition.swift; sourceTree = "<group>"; };
 		0A9E8ACFDFB93E61196E2859883A55D6 /* Pods-DynamicSkeleton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DynamicSkeleton_Example-umbrella.h"; sourceTree = "<group>"; };
 		11A5BF508BFD2A3B4D29443045B7E9D9 /* DynamicSkeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicSkeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +76,7 @@
 		3846B1C9F9A46074F2C3BD13BC59BEE5 /* Pods-DynamicSkeleton_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DynamicSkeleton_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3A7FDC7FC24E18C264CAF0F02FBB12FC /* SkeletonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		4CDF34EADABFB34F6F9C229B162F28FF /* GradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4CDF34EADABFB34F6F9C229B162F28FF /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		50459E60B176B7A95D86898A7D4BB29E /* DynamicSkeleton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicSkeleton.xcconfig; sourceTree = "<group>"; };
 		561FE22B0688E7ADBC0F0BA16896B431 /* DynamicSkeleton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicSkeleton-dummy.m"; sourceTree = "<group>"; };
 		5B534C911E626872B679012A1B37312E /* GradientTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientTransition.swift; sourceTree = "<group>"; };
@@ -172,7 +174,7 @@
 		2C5CC5AC719FCE707D9119444DFE3A01 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4CDF34EADABFB34F6F9C229B162F28FF /* GradientView.swift */,
+				4CDF34EADABFB34F6F9C229B162F28FF /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 		6941A22872D75A96340EDD214F3ACB7D /* Gradient */ = {
 			isa = PBXGroup;
 			children = (
+				061E6A661F2FBCCF00812A71 /* GradientView.swift */,
 				C0846897A8A3598520976732030EBBFF /* CAGradientLayer+Slide.swift */,
 				D90035556EDDA76D395C70104DE4D2F1 /* GradientDirection.swift */,
 				87DD60B35205FE1E9110F74A2E02D7F1 /* GradientPoint.swift */,
@@ -464,12 +467,13 @@
 			files = (
 				B5523779CE9B7DEBC8D58DD5F0E7826C /* CAGradientLayer+Slide.swift in Sources */,
 				F8AA6A392C4341E3267B1B313EF7060B /* DynamicSkeleton-dummy.m in Sources */,
+				061E6A671F2FBCCF00812A71 /* GradientView.swift in Sources */,
 				17BB50F5CAF3908B2D5DF50EA31427FF /* DynamicSkeletonManager.swift in Sources */,
 				06BD94B41F2ED7FF006983DE /* SkeletonPosition.swift in Sources */,
 				D793DC2890DD32917BE02CA4514D0922 /* GradientDirection.swift in Sources */,
 				C988196EF3790F934D1D4D91AB3A73DB /* GradientPoint.swift in Sources */,
 				499318F64D95169F79B34CCD2057266A /* GradientTransition.swift in Sources */,
-				87E0B323CD3F502A0A37F4AB91BE0689 /* GradientView.swift in Sources */,
+				87E0B323CD3F502A0A37F4AB91BE0689 /* UIColor.swift in Sources */,
 				9B037CB42DB1AD66D1913952D32331DA /* SkeletonModel.swift in Sources */,
 				89679B8E814655E85B2F967A339A5DF5 /* SkeletonView.swift in Sources */,
 			);

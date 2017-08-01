@@ -15,17 +15,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.setupNavigationBar()
 
-        /*let headerPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 0, bottom: nil)
-        let headerColor = UIColor(red: 117 / 255, green: 193 / 255, blue: 245 / 255, alpha: 1.0)
-        let headerModel = SkeletonModel(view: UIImage(named: "header")!, color: headerColor, repeating: 1, position: headerPosition, height: 78, spacing: 0, repeatHeight: nil)*/
+        let headerPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 0, bottom: nil, height: 78)
+        let headerModel = SkeletonModel(view: HeaderView.self, repeating: 1, position: headerPosition, height: nil)
 
-        let rowsPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 0, bottom: 0)
-        let rowsModel = SkeletonModel(view: RowView.self, repeating: 0, position: rowsPosition, height: 0, spacing: 0)
+        let rowsPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 78, bottom: 100, height: nil)
+        let rowsModel = SkeletonModel(view: RowView.self, repeating: 0, position: rowsPosition, height: 74)
 
-        DynamicSkeletonManager.sharedInstance.createSkeleton(view: self.view, model: [rowsModel])
+        let bottonPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: nil, bottom: 0, height: 100)
+        let bottonModel = SkeletonModel(view: HeaderView.self, repeating: 1, position: bottonPosition, height: nil)
+
+        DynamicSkeletonManager.sharedInstance.createSkeleton(view: self.view, model: [headerModel, rowsModel, bottonModel])
     }
 
     func setupNavigationBar() {
+        self.title = "DynamicSkeleton"
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barStyle = .default
