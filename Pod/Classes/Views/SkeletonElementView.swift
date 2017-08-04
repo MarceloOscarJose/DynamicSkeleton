@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SkeletonView: UIView {
+public class SkeletonElementView: UIView {
 
     private let brightened: CGFloat = 0.94
     public let gradientView = GradientView(frame: .zero)
@@ -23,7 +23,6 @@ public class SkeletonView: UIView {
         setUpGradientView()
     }
 
-    /// Sets up the `GradientView` with constraints that that cause it to fill the `UIView` entirely.
     fileprivate func setUpGradientView() {
         gradientView.backgroundColor = UIColor.clear
         gradientView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,5 +52,3 @@ public class SkeletonView: UIView {
         self.gradientView.gradientLayer.stopSliding()
     }
 }
-
-

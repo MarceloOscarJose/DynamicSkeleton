@@ -12,8 +12,6 @@ import DynamicSkeleton
 
 class ViewController: UIViewController {
 
-    let skeletonView:UIView = UIView()
-
     let landingView:UIImageView = {
        let view = UIImageView()
         view.image = UIImage(named: "landing")
@@ -46,22 +44,15 @@ class ViewController: UIViewController {
     }
 
     func createSkeletonContainer() {
-        self.view.addSubview(skeletonView)
 
-        skeletonView.autoPinEdge(.top, to: .top, of: self.view, withOffset: 0)
-        skeletonView.autoPinEdge(.left, to: .left, of: self.view, withOffset: 0)
-        skeletonView.autoPinEdge(.right, to: .right, of: self.view, withOffset: 0)
-        skeletonView.autoPinEdge(.bottom, to: .bottom, of: self.view, withOffset: 0)
+        let exitView = Bundle.main.loadNibNamed("ExitView", owner: ExitView(), options: nil)?[0] as! UIView
 
-        let headerPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 0, bottom: nil, height: 82)
-        let headerModel = SkeletonModel(view: HeaderView.self, repeating: 1, position: headerPosition, height: nil)
+        let containers = [
+            DynamicSkeletonModel(view: HeaderView(), repeating: 1, left: 0, right: 0, top: 0, bottom: nil, height: 82),
+            DynamicSkeletonModel(view: RowView(), repeating: 0, left: 0, right: 0, top: 82, bottom: 50, height: 74),
+            DynamicSkeletonModel(view: exitView, repeating: 1, left: 0, right: 0, top: nil, bottom: 0, height: 50)
+        ]
 
-        let rowsPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: 78, bottom: 0, height: nil)
-        let rowsModel = SkeletonModel(view: RowView.self, repeating: 0, position: rowsPosition, height: 74)
-
-        let exitPosition: SkeletonPosition = SkeletonPosition(left: 0, right: 0, top: nil, bottom: 0, height: 50)
-        let exitModel = SkeletonModel(view: ExitView.self, repeating: 0, position: exitPosition, height: nil)
-
-        DynamicSkeletonManager.sharedInstance.createSkeleton(view: skeletonView, model: [headerModel, rowsModel, exitModel])
+        DynamicSkeleton.sharedInstance.createSkeleton(mainView: self.view, models: containers)
     }
 }

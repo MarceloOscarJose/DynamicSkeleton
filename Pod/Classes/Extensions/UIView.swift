@@ -15,4 +15,8 @@ extension UIView {
             self.alpha = 0.0
         }, completion: completion)
     }
+
+    func copyView() -> UIView {
+        return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self))! as! UIView
+    }
 }

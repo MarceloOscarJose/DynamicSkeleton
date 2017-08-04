@@ -19,42 +19,43 @@ class RowView: UIView {
         view.layer.borderWidth = 0
         return view
     }()
-    let title: SkeletonView = {
-        let view = SkeletonView()
+    let title: SkeletonElementView = {
+        let view = SkeletonElementView()
         view.backgroundColor = UIColor(red: 236 / 255, green: 236 / 255, blue: 236 / 255, alpha: 1)
         return view
     }()
-    let amount: SkeletonView = {
-        let view = SkeletonView()
+    let amount: SkeletonElementView = {
+        let view = SkeletonElementView()
         view.backgroundColor = UIColor(red: 236 / 255, green: 236 / 255, blue: 236 / 255, alpha: 1)
         return view
     }()
-    let date: SkeletonView = {
-        let view = SkeletonView()
+    let date: SkeletonElementView = {
+        let view = SkeletonElementView()
         view.backgroundColor = UIColor(red: 236 / 255, green: 236 / 255, blue: 236 / 255, alpha: 1)
         return view
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
+    init() {
+        super.init(frame: .zero)
+        self.setupElements()
+        self.setupConstraints()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView()
     }
 
-    func setupView() {
+    func setupElements() {
         self.addSubview(activityImage)
         self.addSubview(title)
         self.addSubview(amount)
         self.addSubview(date)
-        self.createConstraints()
     }
 
-    func createConstraints() {
+    func setupConstraints() {
         self.backgroundColor = UIColor.white
+
+        self.autoSetDimension(.height, toSize: 74)
 
         activityImage.autoSetDimension(.height, toSize: 50)
         activityImage.autoSetDimension(.width, toSize: 50)

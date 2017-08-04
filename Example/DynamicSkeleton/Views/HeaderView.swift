@@ -23,24 +23,23 @@ class HeaderView: UIView {
         return view
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
+    init() {
+        super.init(frame: .zero)
+        self.setupElements()
+        self.setupConstraints()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView()
     }
 
-    func setupView() {
+    func setupElements() {
         self.backgroundColor = UIColor(red: 0 / 255, green: 148 / 255, blue: 223 / 255, alpha: 1)
         self.addSubview(balanceTitle)
         self.addSubview(balanceAmount)
-        self.createConstraints()
     }
 
-    func createConstraints() {
+    func setupConstraints() {
         balanceTitle.autoPinEdge(.top, to: .top, of: self, withOffset: 20)
         balanceTitle.autoPinEdge(.left, to: .left, of: self, withOffset: 14)
         balanceTitle.autoSetDimension(.height, toSize: 14)

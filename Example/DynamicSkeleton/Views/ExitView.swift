@@ -12,39 +12,17 @@ import PureLayout
 
 class ExitView: UIView {
 
-    let dismissButton:UIButton = {
-        let button = UIButton()
-        button.setTitle("Dismiss skeleton", for: .normal)
-        button.backgroundColor = UIColor.black
-        return button
-    }()
+    @IBOutlet weak var dismissButton: UIButton!
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
+    init() {
+        super.init(frame: .zero)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView()
     }
 
-    func setupView() {
-        self.backgroundColor = UIColor.white
-        self.addSubview(dismissButton)
-    
-        dismissButton.addTarget(self, action: #selector(dismissSkeleton), for: .touchUpInside)
-        self.createConstraints()
-    }
-
-    func createConstraints() {
-        dismissButton.autoPinEdge(.top, to: .top, of: self, withOffset: 0)
-        dismissButton.autoPinEdge(.bottom, to: .bottom, of: self, withOffset: 0)
-        dismissButton.autoPinEdge(.left, to: .left, of: self, withOffset: 0)
-        dismissButton.autoPinEdge(.right, to: .right, of: self, withOffset: 0)
-    }
-
-    func dismissSkeleton(sender: UIButton!) {
-        DynamicSkeletonManager.sharedInstance.removeSkeleton { }
+    @IBAction func dismissSkeleton(_ sender: Any) {
+        DynamicSkeleton.sharedInstance.removeSkeleton { }
     }
 }
