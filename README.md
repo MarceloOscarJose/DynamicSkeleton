@@ -9,7 +9,7 @@
 A modularized skeleton
 
 ## Preview
-<img src="skeleton.gif" width="350"/>
+<img src="skeleton.gif" width="300"/>
 
 ## Usage
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
