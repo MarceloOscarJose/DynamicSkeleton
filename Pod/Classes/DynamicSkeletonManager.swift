@@ -67,7 +67,10 @@ open class DynamicSkeleton {
         view.autoPinEdge(.top, to: .top, of: containerView, withOffset: topOffset)
         view.autoPinEdge(.left, to: .left, of: containerView, withOffset: 0)
         view.autoPinEdge(.right, to: .right, of: containerView, withOffset: 0)
-        view.autoSetDimension(.height, toSize: CGFloat(model.height!))
+
+        if let height = model.height {
+            view.autoSetDimension(.height, toSize: CGFloat(height))
+        }
 
         for element in view.subviews {
             if let elementSkeleton = element as? SkeletonElementView {
